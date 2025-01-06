@@ -1,0 +1,203 @@
+/* Reset CSS */
+body, h1, h2, p, ul, li, img, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+    margin: 0;
+}
+
+/* Header Styles */
+header {
+    background: #6a7c8e;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .layar-dalam {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+}
+
+header .logo-img {
+    height: 120px;
+}
+
+header .menu ul {
+    display: flex;
+    gap: 20px;
+}
+
+header .menu ul li a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+header .menu ul li a:hover {
+    color: #000;
+}
+
+/* Gallery Header Styles */
+.gallery-header {
+    background: #d0ecf6;
+    color: #252622;
+    text-align: center;
+    padding: 0px 0;
+}
+
+.gallery-header h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.gallery-header p {
+    font-size: 1.2em;
+}
+
+
+/* Gallery Section Styles */
+.gallery {
+    padding: 30px 10%;
+    background: #f4f4f9;
+}
+
+.gallery-container {
+    display: grid; /* Menggunakan grid layout */
+    grid-template-columns: repeat(2, 1fr); /* 3 kolom per baris */
+    gap: 20px; /* Jarak antar gambar */
+    justify-content: center; /* Pusatkan grid */
+    align-items: center; /* Pusatkan gambar secara vertikal */
+}
+
+.gallery-container img {
+    width: 100%; /* Lebar penuh elemen grid */
+    height: 200px; /* Atur tinggi gambar */
+    object-fit: cover; /* Menjamin proporsi gambar */
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animasi saat hover */
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Bayangan lebih besar */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 15px 0;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Responsif untuk perangkat dengan layar maksimum 768px (tablet & ponsel) */
+@media (max-width: 768px) {
+    header .layar-dalam {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px; /* Menambahkan jarak antar elemen */
+    }
+
+    header .menu ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0; /* Menghilangkan padding default */
+    }
+
+    header .menu ul li {
+        margin: 0;
+    }
+
+    .gallery-header h2 {
+        font-size: 2em; /* Mengurangi ukuran font judul */
+        text-align: center; /* Pusatkan teks */
+    }
+
+    .gallery-header p {
+        font-size: 1em; /* Mengurangi ukuran font paragraf */
+        text-align: center;
+        margin: 10px 0; /* Memberikan jarak lebih antar elemen */
+    }
+
+    .gallery-items {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Galeri fleksibel */
+        gap: 15px;
+    }
+}
+
+/* Responsif untuk perangkat dengan layar maksimum 576px (ponsel) */
+@media (max-width: 576px) {
+    header .menu ul {
+        align-items: flex-start;
+    }
+
+    .gallery-header h2 {
+        font-size: 1.8em; /* Ukuran lebih kecil untuk ponsel */
+    }
+
+    .gallery-header p {
+        font-size: 0.9em; /* Font lebih kecil */
+    }
+
+    .gallery-items {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ukuran lebih kecil untuk item */
+        gap: 10px;
+    }
+}
+
+/* Responsif untuk perangkat dengan layar antara 768px - 1024px (tablet) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header .layar-dalam {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .gallery-header h2 {
+        font-size: 2.5em;
+    }
+
+    .gallery-header p {
+        font-size: 1.1em;
+    }
+
+    .gallery-items {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolom untuk layar sedang */
+        gap: 20px;
+    }
+}
+
+/* Responsif untuk perangkat dengan layar lebih besar dari 1200px (desktop besar) */
+@media (min-width: 1200px) {
+    .gallery-header h2 {
+        font-size: 3em; /* Ukuran lebih besar untuk layar besar */
+    }
+
+    .gallery-header p {
+        font-size: 1.2em;
+    }
+
+    .gallery-items {
+        grid-template-columns: repeat(4, 1fr); /* 4 kolom untuk layar besar */
+        gap: 25px;
+    }
+}
