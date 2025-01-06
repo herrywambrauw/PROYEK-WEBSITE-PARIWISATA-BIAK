@@ -1,0 +1,463 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    font-size: 15px;
+}
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.layar-dalam {
+   width: 1000px;
+   margin: auto; 
+}
+
+.layar-penuh {
+    width: 100%;
+}
+
+nav {
+    z-index: 100;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    border-bottom: 1px solid #b1b1b1;
+    line-height: 50px;
+    width: 100%;
+    transition: background-color 0.5s ease;
+}
+
+nav.putih {
+    background-color: #fff;
+}
+
+nav .logo {
+    float: left;
+    position: relative;
+    line-height: 55px;
+    text-align: center;
+}
+
+nav .logo img {
+    vertical-align: middle;
+    width: 130px;
+}
+
+nav .menu {
+    float: right;
+    height: 60px;
+    max-width: 600px;
+}
+
+nav .menu ul {
+    list-style-type: none;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+}
+
+nav .menu ul li {
+    list-style-type: none;
+    float: left;
+    line-height: 60px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/*pengaturan header*/
+header{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+header video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -2;
+}
+
+header .intro{
+    z-index: 100;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 50%;
+}
+header .intro h3{
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+}
+.tombol{
+    background-color: #000;
+    height: 40px;
+    line-height: 42px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 20px 0px 20px;
+    font-size: 15px;
+    border-radius: 4px;
+}
+header .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 50%;
+    z-index: -1;
+}
+
+.tombol-menu{
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+.tombol-menu .garis{
+    height: 3px;
+    background-color: #fff;
+}
+section{
+    padding: 50px 0px 50px 0px;
+}
+section h3{
+    font-size: 30px;
+}
+section h3::after{
+    content: "";
+    border-bottom: 5px solid #000;
+    width: 52px;
+    display: block;
+    margin: 20px auto;
+}
+#aboutus,#team,#blog{
+    text-align: center;
+}
+section p.ringkasan{
+    font-size: italic;
+    font-size: 18px;
+    color: #000;
+}
+section .konten-isi p{
+    font-style: normal;
+}
+
+
+nav.putih{
+    background-color: #fff;
+}
+nav.putih .tombol-menu .garis{
+    background-color: #000;
+}
+nav.putih ul li a{
+    color: #333;
+}
+nav .logo img.hitam{
+    display: none;
+}
+
+section.abuabu{
+    background-color: #f5f6f6;
+}
+.support,.tim,.blog{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.support h6,.tim h6{
+    margin: 0px;
+    margin-top: 20px;
+    padding: 0px; 
+    font-size: 18px;
+    font-weight: bold;
+}
+.support img {
+    width: 50px;
+}
+.support div,.tim div{
+    text-align: center;
+    width: 26%;
+}
+
+section#gallery{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: 0px 10px 0px 10px;
+}
+section#gallery div{
+    padding: 15px;
+}
+section#gallery div img{
+    height: 140px;
+    border-radius: 5px;
+}
+section#gallery div img:hover{
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+}
+
+section.quote{
+    background:url('asset/background-biak.jpg') no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-style: italic;
+    padding: 100px;
+}
+section.quote .layar-dalam p{
+    display: inline;
+    background:url('asset/quote-icon.png') no-repeat;
+    padding: 40px;
+}
+
+
+/* Gaya untuk teks budaya biak dengan border penuh */
+.intro-budaya {
+    text-align: center; /* Pusatkan teks */
+    font-size: 18px; /* Ukuran teks */
+    font-weight: 500; /* Tebal sedang */
+    margin: 5px 5px; /* Hapus margin kiri dan kanan */
+    width: 98vw; /* Lebar penuh viewport */
+    color: #333; /* Warna teks */
+    padding: 20px 0; /* Spasi atas dan bawah */
+    background-color: #f3f3f3; /* Latar belakang terang */
+    border-top: 1px solid efecec; /* Border atas */
+    border-bottom: 1px solid #efecec; /* Border bawah */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    line-height: 1.6; /* Jarak antar baris */
+}
+
+
+
+
+.Budaya {
+    display: flex;
+    flex-wrap: wrap; /* Bolehkan elemen pindah baris jika diperlukan */
+    justify-content: space-between; /* Atur spasi di antara elemen */
+    gap: 20px; /* Jarak antar elemen */
+    padding: 10px; /* Tambahkan ruang luar untuk kontainer */
+    background-color: #f9f9f9; /* Background kontainer */
+}
+
+
+.Budaya div {
+    flex: 1 1 300px; /* Lebar minimal 300px, fleksibel sesuai layar */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Atur konten vertikal */
+    justify-content: flex-start; /* Konten mulai dari atas */
+    text-align: center;
+    height: auto; /* Tinggi otomatis berdasarkan konten */
+}
+
+.Budaya div img {
+    width: 100%;
+    height: 320px; /* Gambar tinggi konsisten */
+    object-fit: cover; /* Jaga proporsi gambar */
+    border-radius: 15px;
+    margin-bottom: 10px; /* Jarak bawah gambar */
+}
+
+
+.Budaya img:hover {
+    transform: scale(1.05); /* Sedikit membesar saat hover */
+}
+
+.Budaya div h6 {
+    font-size: 25px;
+    padding: 5px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.Budaya div p {
+    text-align: justify; /* Membuat teks rata kanan-kiri */
+    font-size: 14px;
+    line-height: 1.8; /* Memberikan ruang antar baris */
+    margin: 0; /* Menghilangkan margin default */
+    flex-grow: 1; /* Memastikan teks dapat tumbuh sesuai ruang yang ada */
+}
+
+.Budaya div.box {
+    background-color: #f9f9f9; /* Latar belakang untuk kotak teks */
+    padding: 20px; /* Memberi ruang di dalam box */
+    margin-top: 5px; /* Memberi jarak dari elemen di atas */
+    border: 1px solid #ccc; /* Bingkai tipis */
+    border-radius: 8px; /* Sudut kotak melengkung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    line-height: 1.8; /* Menyesuaikan ruang antar baris */
+}
+
+.Budaya div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Memastikan setiap div tumbuh dan sama ukurannya */
+}
+
+
+
+.tim img{
+    width: 90%;
+    box-shadow: 0px -10px 30px #ccc;
+    border-radius: 5px;
+}
+
+footer{
+    padding: 50px 0px 50px 0px;
+    background-color: #343a40;
+    color: #fff;
+}
+footer .layar-dalam{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer .layar-dalam div{
+    width: 20%;
+}
+footer .layar-dalam h5{
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer .layar-dalam .copyright{
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #666;
+    text-align: center;
+}
+
+/* Responsif Global */
+@media screen and (max-width: 1200px) {
+    .layar-dalam {
+        width: 90%; /* Kontainer lebih fleksibel */
+    }
+    nav .menu ul {
+        flex-direction: column; /* Ubah menu ke kolom di layar kecil */
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .Budaya {
+        flex-direction: column; /* Elemen budaya menjadi vertikal */
+        align-items: center;
+    }
+    .Budaya div {
+        flex: 1 1 auto; /* Elemen penuh sesuai layar */
+        width: 90%; /* Lebar menyesuaikan */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header .intro h3 {
+        font-size: 30px; /* Ubah ukuran heading */
+    }
+    .Budaya {
+        gap: 15px; /* Jarak antar elemen */
+    }
+    .Budaya div {
+        padding: 10px; /* Kurangi padding untuk layar kecil */
+    }
+    .intro-budaya {
+        font-size: 16px; /* Ukuran teks lebih kecil */
+        padding: 15px 0; /* Kurangi padding */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .search-container {
+        flex-direction: column; /* Kotak pencarian vertikal */
+        padding: 15px;
+    }
+    .search-input {
+        width: 100%; /* Lebar penuh untuk input */
+        margin-bottom: 10px; /* Jarak bawah pada input */
+    }
+    .search-button {
+        width: 100%; /* Tombol penuh pada layar sempit */
+    }
+
+    footer .layar-dalam {
+        flex-direction: column; /* Elemen footer bertumpuk */
+        align-items: center;
+    }
+    footer .layar-dalam div {
+        width: 80%;
+    }
+}
+
+
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+.search-container form {
+    display: flex;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.search-input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    width: 300px;
+    font-size: 16px;
+}
+
+.search-button {
+    background-color: #666;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #666;
+}

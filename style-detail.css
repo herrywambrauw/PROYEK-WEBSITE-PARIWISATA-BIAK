@@ -1,0 +1,178 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        nav {
+            background-color: #515253;
+            padding: 10px 0;
+            color: #fff;
+        }
+
+        nav .layar-dalam {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        nav .logo img {
+            height: 50px;
+        }
+
+        nav .menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav .menu ul li {
+            margin: 0 15px;
+        }
+
+        nav .menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+
+        nav .menu ul li a:hover {
+            color: #f1f1f1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+
+        .image-container img {
+            width: 100%;           /* Menggunakan lebar penuh kontainer */
+            max-width: 770px;      /* Ukuran maksimal gambar */
+            height: auto;          /* Agar tinggi gambar menyesuaikan dengan lebar */
+            object-fit: cover;     /* Menjaga rasio aspek gambar */
+            border-radius: 8px;    /* Memiliki sudut gambar yang bulat */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambah bayangan untuk efek 3D */
+            margin: 10px auto;     /* Menambah margin untuk spacing yang lebih baik */
+            display: block;        /* Agar gambar berada di tengah kontainer */
+        }
+        
+
+        .content {
+            width: 100%;           /* Menggunakan lebar penuh kontainer */
+            max-width: 760px;
+            margin: 20px auto;  
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            
+
+        }
+
+        .content h2 {
+            color: #333;
+        }
+
+        .content p {
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        .tombol {
+            display: flex;            /* Tetap menggunakan flexbox */
+            justify-content: center;  /* Meratakan horizontal */
+            align-items: flex-start;  /* Menghapus efek vertikal tengah agar lebih mendekati konten atas */
+            margin-top: 10px;         /* Mengurangi jarak dari konten sebelumnya */
+            margin-bottom: 20px;      /* Memberikan jarak secukupnya ke bawah */
+        }
+        
+        .back-link {
+            margin: 0;                /* Menghapus margin otomatis */
+            padding: 10px 20px;       /* Atur padding sesuai kebutuhan */
+        }
+        
+
+        .back-link:hover {
+            background: #60b0e4;
+        }
+
+        /* Gaya Responsif */
+
+/* Layar kecil (ponsel) */
+@media (max-width: 576px) {
+    nav .layar-dalam {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav .menu ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .image-container img {
+        max-width: 100%;
+    }
+}
+
+/* Layar sedang (tablet) */
+@media (max-width: 768px) {
+    nav .menu ul {
+        flex-wrap: wrap;
+    }
+
+    nav .menu ul li {
+        margin: 5px 10px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .image-container img {
+        max-width: 100%;
+    }
+}
+
+/* Layar besar (desktop besar) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .content {
+        max-width: 800px;
+    }
+
+    .image-container img {
+        max-width: 900px;
+    }
+}

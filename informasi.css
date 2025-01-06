@@ -1,0 +1,152 @@
+/* Gaya umum */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #6a7c8e;
+    padding: 10px 0;
+}
+
+nav .layar-dalam {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav .logo img{
+     vertical-align: middle;
+     width: 120px; 
+} 
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+.destination-info {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.destination-info h1 {
+    color: #666;
+    text-align: center;
+}
+
+.destination-info .subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.destination-info .content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.images img {
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #666;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Query untuk Responsivitas */
+
+/* Layar kecil (ponsel) */
+@media (max-width: 576px) {
+    nav .layar-dalam {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .destination-info {
+        padding: 15px;
+    }
+
+    .destination-info .subtitle {
+        font-size: 16px;
+    }
+
+    .images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .images img {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Layar sedang (tablet) */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 15px;
+    }
+
+    .destination-info {
+        margin: 30px auto;
+    }
+
+    .images img {
+        width: 45%;
+    }
+}
+
+/* Layar besar (desktop besar) */
+@media (min-width: 1200px) {
+    .destination-info {
+        max-width: 1000px;
+    }
+
+    .images img {
+        width: 25%;
+    }
+}
